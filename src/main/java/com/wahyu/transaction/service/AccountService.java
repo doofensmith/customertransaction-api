@@ -3,6 +3,7 @@ package com.wahyu.transaction.service;
 import com.wahyu.transaction.constant.AppConstant;
 import com.wahyu.transaction.domain.dao.AccountDao;
 import com.wahyu.transaction.domain.dto.AccountDto;
+import com.wahyu.transaction.domain.dto.AccountWithPointDto;
 import com.wahyu.transaction.repository.AccountRepository;
 import com.wahyu.transaction.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +46,10 @@ public class AccountService {
         }
     }
 
-    public ResponseEntity<Object> addNew(AccountDto request) {
+    public ResponseEntity<Object> addNew(AccountWithPointDto request) {
         AccountDao accountDao = AccountDao.builder()
                 .name(request.getName())
+                .totalPoint(0)
                 .build();
         accountDao = accountRepository.save(accountDao);
 

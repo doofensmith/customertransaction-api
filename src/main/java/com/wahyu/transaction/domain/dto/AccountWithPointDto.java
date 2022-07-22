@@ -14,11 +14,10 @@ import java.io.Serializable;
 @Data
 @SuperBuilder
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class AccountDto implements Serializable {
+public class AccountWithPointDto extends AccountDto implements Serializable {
 
-    private static final long serialVersionUID = -8122740129704958544L;
+    private static final long serialVersionUID = -3623957291828239514L;
 
-    private Integer accountId;
-    private String name;
+    private Integer totalPoint;
 
 }
