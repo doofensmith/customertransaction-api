@@ -1,6 +1,6 @@
 package com.wahyu.transaction.util;
 
-import com.wahyu.transaction.domain.dao.ApiResponse;
+import com.wahyu.transaction.domain.common.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

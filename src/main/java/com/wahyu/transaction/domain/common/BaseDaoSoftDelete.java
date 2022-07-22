@@ -1,4 +1,4 @@
-package com.wahyu.transaction.domain.dao;
+package com.wahyu.transaction.domain.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
