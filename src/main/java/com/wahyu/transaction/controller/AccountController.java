@@ -23,6 +23,15 @@ public class AccountController {
         }
     }
 
+    @GetMapping("/point")
+    public ResponseEntity<Object> countPoint() {
+        try {
+            return accountService.countPoint();
+        }catch (Exception e) {
+            throw e;
+        }
+    }
+
     @GetMapping(value = "/{id}")
     public ResponseEntity<Object> getById(@PathVariable Integer id) {
         try {

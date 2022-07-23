@@ -16,4 +16,7 @@ public interface TransactionRepository extends JpaRepository<TransactionDao, Lon
             "order by t.transactionDate")
     List<TransactionDao> findByAccount_AccountIdAndTransactionDateBetweenOrderByTransactionDateAsc(Integer accountId, LocalDateTime transactionDateStart, LocalDateTime transactionDateEnd);
 
+    @Query("select t from TransactionDao t where t.account.accountId = ?1")
+    List<TransactionDao> findByAccount_AccountId(Integer accountId);
+
 }

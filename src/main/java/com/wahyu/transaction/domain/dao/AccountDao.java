@@ -32,9 +32,6 @@ public class AccountDao extends BaseDaoSoftDelete implements Serializable {
     @Column(name = "name", nullable = false, length = 40)
     private String name;
 
-    @Column(name = "total_point")
-    private Integer totalPoint;
-
     @OneToMany(mappedBy = "account")
     private List<TransactionDao> transactions;
 
