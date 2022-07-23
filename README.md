@@ -6,7 +6,7 @@
   SQL : ```create database db_custtransaction;```
 2. **Konfigurasi file** [application.properties](./src/main/resources/application.properties)  
   Ubah field berikut sesuai username dan password pada MySQL yang terinstall:  
-   ``spring.datasource.username=[username] default root``
+   ``spring.datasource.username=[username] default root``  
    ``spring.datasource.password=[password] default empty``
 3. **Jalankan Springboot :**  
   Command : ``mvn spring-boot:run``
