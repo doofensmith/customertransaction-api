@@ -86,7 +86,7 @@ public class AccountService {
         }
     }
 
-    public ResponseEntity<Object> addNew(AccountWithPointDto request) {
+    public ResponseEntity<Object> addNew(AccountDto request) {
         AccountDao accountDao = AccountDao.builder()
                 .name(request.getName())
                 .build();

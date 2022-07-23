@@ -1,7 +1,6 @@
 package com.wahyu.transaction.controller;
 
 import com.wahyu.transaction.domain.dto.AccountDto;
-import com.wahyu.transaction.domain.dto.AccountWithPointDto;
 import com.wahyu.transaction.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +41,7 @@ public class AccountController {
     }
 
     @PostMapping(value = "")
-    public ResponseEntity<Object> addNew(@RequestBody AccountWithPointDto request) {
+    public ResponseEntity<Object> addNew(@RequestBody AccountDto request) {
         try {
             return accountService.addNew(request);
         }catch (Exception e) {
