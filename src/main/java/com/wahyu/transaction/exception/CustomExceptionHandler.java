@@ -4,7 +4,6 @@ import com.wahyu.transaction.constant.AppConstant;
 import com.wahyu.transaction.util.ResponseUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class CustomExceptionHandler {
 
     @ExceptionHandler(NullPointerException.class)
-    public ResponseEntity<Object> response(MethodArgumentNotValidException ex) {
+    public ResponseEntity<Object> response(NullPointerException ex) {
         return ResponseUtil.build(HttpStatus.BAD_REQUEST, AppConstant.BAD_REQUEST.message, null);
     }
 
